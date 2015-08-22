@@ -10,11 +10,21 @@
 #include "Buffer.h"
 #include <stdio.h>
 #include "GameSwitcher.h"
+#include "LuaWrapper.h"
+#include "CallByLua.h"
 
 int main(int argc, char **argv)
 {
+
 	InetAddr addr("127.0.0.1", 1234);
-	TcpClient *client = new TcpClientEx();
+	TcpClientEx *client = new TcpClientEx();
+	client->eventBase(GAME_SWITCHER->eventBase());
+	client->connect(addr);
+	CallByLua(client);
+	LUA_WRAPPER->path("./Script/?.lua");
+	LUA_WRAPPER->doString("require \"ClientMain\"");
+	GAME_SWITCHER->start();
+	/*
 	client->eventBase(GAME_SWITCHER->eventBase());
 	client->connect(addr);
 	Buffer *buf;
@@ -24,6 +34,7 @@ int main(int argc, char **argv)
 	client->send(-1, buf);
 
 	GAME_SWITCHER->start();
+	*/
 
 	return 0;
 }

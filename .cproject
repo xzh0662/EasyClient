@@ -25,6 +25,7 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.388043471" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1679530018" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Easy}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Lua}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.477599416" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
@@ -37,8 +38,9 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1448981461" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
 								<option id="gnu.cpp.link.option.userobjs.203013327" name="Other objects" superClass="gnu.cpp.link.option.userobjs" valueType="userObjs">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Easy/Debug/libEasy.a}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Lua/Debug/liblua.a}&quot;"/>
 								</option>
-								<option id="gnu.cpp.link.option.libs.881168326" superClass="gnu.cpp.link.option.libs" valueType="libs">
+								<option id="gnu.cpp.link.option.libs.881168326" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="event_core"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.265674736" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">

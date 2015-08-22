@@ -11,6 +11,8 @@
 
 using namespace Easy;
 
+struct lua_State;
+
 class TcpClientEx : public TcpClient
 {
 	typedef TcpClient super;
@@ -20,6 +22,10 @@ public:
 
 	virtual int send(int fd, Buffer *buffer);
 	virtual int receive(int fd, Buffer *buffer);
+
+	int callByLua(lua_State* L);
+
+	int coKey_;
 };
 
 
